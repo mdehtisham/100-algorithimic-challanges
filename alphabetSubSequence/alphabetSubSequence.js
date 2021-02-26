@@ -1,10 +1,3 @@
-// s = "effg" or s = "cdce", the output should be
-//   alphabetSubsequence(s) = false
-
-// s = "ace" or s = "bxz", the output should be
-//   alphabetSubsequence(s) = true.
-
-
 function alphabetSubsequence(str){
   let lettersHash = {
     'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5,
