@@ -1,3 +1,5 @@
+
+// Solution 1
 function alphabetSubsequence(str){
   let lettersHash = {
     'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5,
@@ -14,6 +16,16 @@ function alphabetSubsequence(str){
   return flag
 }
 
+// solution 2
+function alphabetSubsequence(str){
+  let flag = false
+  for(let i=1; i< str.length; i++){
+    if(str.charCodeAt(i) > str.charCodeAt(i-1)) flag = true
+    else return false
+  }
+  return flag
+}
+
 console.log(alphabetSubsequence("ace")) // true
 console.log(alphabetSubsequence("bxz")) // true
 console.log(alphabetSubsequence("effg")) // false
@@ -21,3 +33,4 @@ console.log(alphabetSubsequence("cdce")) // false
 console.log(alphabetSubsequence("axyz")) // true
 console.log(alphabetSubsequence("zop")) // false
 console.log(alphabetSubsequence("ho")) // true
+
